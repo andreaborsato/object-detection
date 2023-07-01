@@ -5,6 +5,8 @@ let detections =[];
 
 function preload () {
   detector = ml5.objectDetector('cocossd');
+  gotDetections();
+  console.log('uuu')
 }
 
 
@@ -27,7 +29,7 @@ function setup() {
   
 }
 
-function draw() {
+async function draw() {
   image(video, 0, 0);
 
   for(let i = 0; i < detections.length; i++) {
