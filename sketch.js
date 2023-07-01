@@ -9,9 +9,9 @@ function preload () {
 
 
 function gotDetections (error, results) {
-if(error){
-console.error(error);
-}
+//if(error){
+//console.error(error);
+//}
  detections = results;
  detector.detect(video, gotDetections);
 
@@ -22,6 +22,7 @@ function setup() {
   video = createCapture(VIDEO);
   video.size(640, 480);
   video.hide();
+  console.log('ready');
   detector.detect(video, gotDetections);
   
 }
